@@ -24,6 +24,7 @@
 
       <param name="odom0" value="/husky_velocity_controller/odom"/>
       <param name="imu0" value="/imu_um7/data"/>
+      <param name="pose0" value="/poseupdate"/>
 
       <rosparam param="odom0_config">[false, false, false,
                                       false, false, false,
@@ -37,11 +38,21 @@
                                      true,  true,  false,
                                      true,  true,  true]</rosparam>
 
+      <rosparam param="pose0_config">[false, false, false,
+                                      false, false, false,
+                                      true,  true,  true,
+                                      false, false, false,
+                                      false, false, false]</rosparam>
+
       <param name="odom0_differential" value="false"/>
       <param name="imu0_differential" value="false"/>
+      <param name="pose0_differential" value="false"/>
+
 
       <param name="odom0_relative" value="true"/>
       <param name="imu0_relative" value="true"/>
+      <param name="pose0_relative" value="true"/>
+
 
       <param name="imu0_remove_gravitational_acceleration" value="true"/>
 
@@ -49,6 +60,7 @@
 
       <param name="odom0_queue_size" value="10"/>
       <param name="imu0_queue_size" value="10"/>
+      <param name="pose0_queue_size" value="10"/>
 
       <param name="debug"           value="false"/>
       <param name="debug_out_file"  value="debug_ekf_localization.txt"/>
